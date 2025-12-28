@@ -1,73 +1,45 @@
-# React + TypeScript + Vite
+# Ask Agent - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o front-end do **Ask Agent**, uma interface moderna, rápida e intuitiva para interação com salas de perguntas e agentes de IA.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: [Vite](https://vitejs.dev/) + [React](https://react.dev/)
+- **Linguagem**: TypeScript
+- **Estilização**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **UI System**: [Shadcn UI](https://ui.shadcn.com/) (Radix UI + Lucid Icons)
+- **Data Fetching**: [TanStack Query v5](https://tanstack.com/query/latest)
+- **Formulários**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- **Datas**: DayJS
 
-## React Compiler
+## 💻 Funcionamento
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O Ask Agent permite que usuários criem salas de discussão onde perguntas podem ser enviadas e respondidas por agentes de inteligência artificial.
 
-## Expanding the ESLint configuration
+1. **Salas de Interação**: O usuário cria ou entra em uma sala específica através de um ID único.
+2. **Transcrição de Áudio**: Suporte para gravação de áudio em tempo real, que é enviado para processamento e transcrição automática.
+3. **Fluxo de Perguntas**: Dentro da sala, qualquer participante pode enviar dúvidas ou tópicos de discussão.
+4. **Respostas com IA**: O backend processa as perguntas e áudios utilizando modelos de linguagem e retorna respostas contextualizadas.
+4. **Interface Reativa**: A aplicação utiliza hooks modernos e gerenciamento de estado eficiente para garantir uma experiência fluida sem recarregamentos desnecessários.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🏁 Como Rodar
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Pré-requisitos
+- Node.js (v20+)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Passo a Passo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Inicie o servidor de desenvolvimento**:
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+A aplicação estará disponível em `http://localhost:5173`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+Desenvolvido com foco em performance e uma experiência de usuário premium.
