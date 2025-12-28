@@ -41,5 +41,12 @@ O Ask Agent permite que usuários criem salas de discussão onde perguntas podem
 
 A aplicação estará disponível em `http://localhost:5173`.
 
+## 🖼️ Demonstração
+
+<div align="center">
+  <img src="image.png" width="45%" />
+  <img src="image-1.png" width="45%" />
+</div>
+
 ---
 Desenvolvido com foco em performance e uma experiência de usuário premium.
